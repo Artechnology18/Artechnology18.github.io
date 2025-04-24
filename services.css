@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background: whitesmoke;
+    color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 33px;
+    font-weight: bolder;
+  }
+  
+  .quote {
+    font-family: 'coronet';
+    font-size: 18px;
+    padding-right: 60px;
+    padding-top: 5px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 38px;
+    font-size: 18px;
+    padding-right: 90px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: navy;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #00d4ff;
+  }
+  
+  /* Hero + Services Section */
+  .services-hero {
+    text-align: center;
+    padding: 30px 10px 80px;
+    background-color: #dfdddd;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .services-hero h1 {
+    font-size: 42px;
+    color: #1a237e;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  
+  /* Grid & Cards */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px 60px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .service-card {
+    background: rgb(249, 240, 247);
+    padding: 30px 25px;
+    border-radius: 26px;
+    box-shadow: 0 10px 24px rgba(0, 20, 55, 0.2);
+    border: 2px solid #131212;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    
+  }
+  
+  .service-card h2 {
+    font-size: 22px;
+    color: #0d47a1;
+    margin-bottom: 12px;
+  }
+  
+  .service-card p {
+    font-size: 15.5px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    border-color: #cfd8dc;
+  }
+  
+  .service-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-hero h1 {
+      font-size: 32px;
+    }
+  
+    .services-grid {
+      padding: 0 20px 60px;
+    }
+  }
+  

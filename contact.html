@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="merge">
+        <div class="logo">AR Technology</div>
+        <div class="quote">Design Develop Deliver</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html" onclick="showSection('home')">Home</a></li>
+        <li><a href="#services" onclick="showSection('services')">Services</a></li>
+        <li><a href="#about" onclick="showSection('about')">About us</a></li>
+        <li><a href="#contact" onclick="showSection('contact')" class="active">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Email ID" required />
+          <input type="tel" name="mobile" placeholder="Mobile Number" required />
+          <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="web">Web Development</option>
+            <option value="uiux">UI & UX Designing</option>
+            <option value="app">App Development</option>
+            <option value="windows">Windows Application</option>
+          </select>
+          <textarea name="description" rows="5" placeholder="Description" required></textarea>
+          <button type="submit" class="send-btn">Send</button>
+          <button type="reset" class="cancel-btn">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>AR Technology</h2>
+        <p class="social-icons">
+          <a href="#"><span>f</span></a>
+          <a href="#"><span>i</span></a>
+          <a href="#"><span>in</span></a>
+          <a href="mailto:artechnologi18@gmail.com">@</a>
+          <a href="tel:+919361578086">91+ 9361578086</a>
+
+        </p<>
+      </div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
