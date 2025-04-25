@@ -4,6 +4,65 @@ body, html {
   font-family: Arial, sans-serif;
   background-color: white;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: whitesmoke;
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 33px;
+  font-weight: bolder;
+}
+.hamburger{
+  display: none;
+}
+
+.quote {
+  font-family: 'coronet';
+  font-size: 18px;
+  padding-right: 60px;
+  padding-top: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 38px;
+  padding-right: 90px;
+  font-size: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
 
 .contact-container {
   display: flex;

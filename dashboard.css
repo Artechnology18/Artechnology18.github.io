@@ -28,6 +28,9 @@ body {
   font-size: 33px;
   font-weight: bolder;
 }
+.hamburger{
+  display: none;
+}
 
 .quote {
   font-family: 'coronet';
@@ -509,16 +512,188 @@ body {
   padding-top: 20px;
   color: #aaa;
 }
-
-/* Responsive Footer */
+/*Responsive*/
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 30px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+
+  .hero {
+    flex-direction: column;
+    padding: 100px 20px 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-top: 150px;
+  }
+  .hero-image{
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .tech-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .about-text {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .services-section {
+    padding: 60px 30px;
+  }
+
+  .services-container {
+    flex-direction: column;
+  }
+
+  .services-right {
+    margin-left: -55px;
+    grid-template-columns: 1fr;
+  }
+
   .footer-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
   }
 
   .footer-links {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
+}
+
+@media (max-width: 350px) {
+  .navbar {
+    padding: 5px 15px;
+  }
+
+  .quote {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+    padding-right: 160px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    gap: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 100;
+    ;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .contact-btn, .btn, .learn-btn, .services-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tech-title {
+    font-size: 28px;
+  }
+
+  .about-text h2 {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .footer-logo h2 {
+    font-size: 18px;
+  }
+
+  .footer-logo p {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
+
+.social-icons a {
+  padding: 6px 8px;
+  font-size: 11px;
+  margin-right: 10px;
+}
+
+.footer-container {
+  gap: 20px;
+}
 }

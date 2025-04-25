@@ -90,4 +90,25 @@ function showAboutSection() {
     aboutSection.classList.add('reveal');
   }, 50);
 }
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetSection = document.querySelector(hash);
+      if (targetSection) {
+        // Hide all other sections if you're using dynamic display
+        document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+        
+        // Show the target section
+        targetSection.classList.add("active");
+  
+        // Optional: Scroll smoothly to it
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
+  
 

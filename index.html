@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AR Technology</title>
   <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="merge">
       <div class="logo">AR Technology</div>
-      <div class="quote">Design Develop Deliver</div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
     </div>
       <ul class="nav-links">
-        <li><a href="dashboard.html" onclick="showSection('home')">Home</a></li>
+        <li><a href="index.html" onclick="showSection('home')">Home</a></li>
         <li><a href="#services" onclick="showSection('services')">Services</a></li>
         <li><a href="#about" onclick="showSection('about')">About us</a></li>
         <li><a href="contact.html" onclick="showSection('contact')">Contact us</a></li>
+        
       </ul>
     </div>
   </header>
@@ -28,7 +32,7 @@
       <div class="hero-content">
         <h1>Bold ideas need Bold Execution</h1><br>
         <p>Elevate your brand with sleek, user-friendly designs that leave a lasting impression.  
-           We craft intuitive experiences that blend functionality with modern aesthetics.<br> 
+           <br> 
            From concept to execution, we turn innovative ideas into seamless digital solutions.</p><br>
            <br>
         <div>
@@ -71,7 +75,7 @@
           Transforming ideas into innovative mobile solutions for every platform.  
 
         </p class="services-desc">
-        <a href="services.html" class="services-btn"> SERVICES</a>
+        <a href="#services" class="services-btn"> SERVICES</a>
       </div>
   
       <div class="services-right">
@@ -104,15 +108,15 @@
     <div class="footer-container">
       <div class="footer-logo">
         <h2>AR Technology</h2>
-        <p class="social-icons">
-          <a href="#"><span>f</span></a>
-          <a href="#"><span>i</span></a>
-          <a href="#"><span>in</span></a>
-          <a href="mailto:artechnologi18@gmail.com">@</a>
-          <a href="tel:+919361578086">91+ 9361578086</a>
-
-        </p<>
+        <div class="social-icons">
+          <a href="#services" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#services" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#services" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:artechnologi18@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+918870214161" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
+      
 
   </footer>
   
