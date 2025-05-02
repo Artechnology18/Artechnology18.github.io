@@ -599,7 +599,6 @@ body {
     gap: 10px;
   }
 }
-
 @media (max-width: 350px) {
   .navbar {
     padding: 5px 15px;
@@ -634,9 +633,8 @@ body {
     font-size: 26px;
     cursor: pointer;
     z-index: 100;
-    ;
   }
-
+  
   .hero-content h1 {
     font-size: 26px;
   }
@@ -687,13 +685,117 @@ body {
     font-size: 11px;
   }
 
-.social-icons a {
-  padding: 6px 8px;
-  font-size: 11px;
-  margin-right: 10px;
-}
+  .social-icons a {
+    padding: 6px 8px;
+    font-size: 11px;
+    margin-right: 10px;
+  }
 
-.footer-container {
-  gap: 20px;
+  .footer-container {
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  
 }
+@media (max-width: 550px) {
+  .navbar {
+    padding: 5px 15px;
+  }
+
+  .quote {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+    padding-right: 160px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    gap: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .contact-btn, .btn, .learn-btn, .services-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tech-title {
+    font-size: 28px;
+  }
+
+  .about-text h2 {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .footer-logo h2 {
+    font-size: 18px;
+  }
+
+  .footer-logo p {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
+
+  .social-icons a {
+    padding: 6px 8px;
+    font-size: 11px;
+    margin-right: 10px;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  /* New styles for the hero-image */
+  .hero-image {
+    display: none;
+  }
+  
 }

@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AR Technology</title>
-  <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -14,12 +13,13 @@
     <nav class="navbar">
       <div class="merge">
         <div class="logo">AR Technology</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html" onclick="showSection('home')">Home</a></li>
-        <li><a href="index.html#services" onclick="showSection('services')">Services</a></li>
-        <li><a href="index.html#about" onclick="showSection('about')">About us</a></li>
-        <li><a href="#contact" onclick="showSection('contact')" class="active">Contact us</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About us</a></li>
+        <li><a href="#contact" class="active">Contact us</a></li>
       </ul>
     </nav>
   </header>
@@ -40,12 +40,15 @@
             <option value="windows">Windows Application</option>
           </select>
           <textarea name="description" rows="5" placeholder="Description" required></textarea>
-          <button type="submit" class="send-btn">Send</button>
-          <button type="reset" class="cancel-btn">Cancel</button>
+          <div class="button-group">
+            <button type="submit" class="send-btn">Send</button>
+            <button type="reset" class="cancel-btn">Cancel</button>
+          </div>
         </form>
       </div>
     </div>
   </main>
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">
@@ -58,10 +61,10 @@
           <a href="tel:+918870214161" class="social-btn"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
-      
+    </div>
   </footer>
 
-  <script src="index.js"></script>
   <script src="contact.js"></script>
+
 </body>
 </html>
