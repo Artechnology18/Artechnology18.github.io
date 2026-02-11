@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate - AR Technology</title>
+  <link rel="stylesheet" href="donate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Razorpay SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="merge">
+        <div class="logo">AR Technology</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="dashboard.html#services">Services</a></li>
+        <li><a href="dashboard.html#about">About us</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="Donate.html" class="active">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Donate Hero Section -->
+  <section class="donate-hero">
+    <div class="hero-overlay">
+      <h1>Support Our Mission</h1>
+      <p>Help us innovate and create impactful digital solutions for everyone</p>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section class="donation-section">
+    <div class="donation-container">
+      <div class="donation-info">
+        <h2>Why Donate?</h2>
+        <div class="info-card">
+          <i class="fas fa-rocket"></i>
+          <h3>Innovation & Growth</h3>
+          <p>Your donations help us invest in cutting-edge technology and tools to deliver better solutions.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-users"></i>
+          <h3>Community Support</h3>
+          <p>We provide free resources, tutorials, and support to aspiring developers and startups.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Open Source Projects</h3>
+          <p>Support our open-source initiatives that benefit the entire developer community.</p>
+        </div>
+      </div>
+
+      <div class="donation-form">
+        <h2>Choose Your Donation Amount</h2>
+        <div class="amount-options">
+          <button class="amount-btn" data-amount="500">₹500</button>
+          <button class="amount-btn" data-amount="1000">₹1000</button>
+          <button class="amount-btn" data-amount="2000">₹2000</button>
+          <button class="amount-btn" data-amount="5000">₹5000</button>
+        </div>
+        
+        <div class="custom-amount">
+          <label for="customAmount">Or enter a custom amount:</label>
+          <div class="input-group">
+            <span class="currency-symbol">₹</span>
+            <input type="number" id="customAmount" placeholder="Enter amount" min="1" />
+          </div>
+        </div>
+
+        <div class="payment-methods">
+          <h3>Proceed to Payment</h3>
+          <div class="payment-options">
+            <button class="payment-btn razorpay-btn" onclick="handleRazorpayPayment()">
+              <i class="fas fa-credit-card"></i>
+              <span>Pay with Razorpay</span>
+              <small>UPI, Cards, Net Banking & More</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="donor-info">
+          <h3>Your Information (Optional)</h3>
+          <input type="text" id="donorName" placeholder="Full Name" />
+          <input type="email" id="donorEmail" placeholder="Email Address" />
+          <textarea id="donorMessage" placeholder="Leave a message (optional)" rows="3"></textarea>
+        </div>
+
+        <div class="terms">
+          <label>
+            <input type="checkbox" id="termsCheck" />
+            I agree to the <a href="#terms">terms and conditions</a>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="impact-section">
+    <h2>Your Impact</h2>
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Community Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support Available</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Is my donation secure?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, absolutely! We use industry-leading payment gateways (Razorpay, PayPal, Stripe) with bank-grade encryption to ensure your transaction is completely secure.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Will I receive a receipt?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, you will receive an email receipt immediately after your donation is processed.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Can I donate anonymously?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, the donor information fields are optional. You can choose to donate without providing your details.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>What payment methods are accepted?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We accept UPI, Credit/Debit Cards, Net Banking, Wallets, and other payment methods through Razorpay's secure payment gateway.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>AR Technology</h2>
+        <div class="social-icons">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:artechnologi18@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+918870214161" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="donate.js"></script>
+</body>
+</html>
